@@ -1,70 +1,39 @@
-# My Vue 3 Project
+# mockba-release
 
-This is a Vue 3 project created with Vite, TypeScript, and ESLint.
+This template should help get you started developing with Vue 3 in Vite.
 
-## Project Structure
+## Recommended IDE Setup
 
-```
-my-vue3-project
-├── public
-│   └── index.html          # Main HTML file for the application
-├── src
-│   ├── assets              # Static assets (images, fonts, stylesheets)
-│   ├── components
-│   │   └── HelloWorld.vue  # HelloWorld component
-│   ├── views
-│   │   └── Home.vue        # Home view component
-│   ├── App.vue             # Root component of the application
-│   └── main.ts             # Entry point of the application
-├── .eslintrc.js            # ESLint configuration
-├── .gitignore              # Git ignore file
-├── index.html              # Duplicate of public/index.html for development
-├── package.json            # Yarn configuration and dependencies
-├── tsconfig.json           # TypeScript configuration
-└── vite.config.ts          # Vite configuration
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+
+## Type Support for `.vue` Imports in TS
+
+TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+
+## Customize configuration
+
+See [Vite Configuration Reference](https://vite.dev/config/).
+
+## Project Setup
+
+```sh
+pnpm install
 ```
 
-## Setup Instructions
+### Compile and Hot-Reload for Development
 
-1. **Clone the repository:**
-   ```bash
-   git clone <repository-url>
-   cd my-vue3-project
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   yarn install
-   ```
-
-3. **Run the development server:**
-   ```bash
-   yarn dev
-   ```
-
-4. **Open your browser and navigate to:**
-   ```
-   http://localhost:3000
-   ```
-
-## Usage
-
-- Modify the components in the `src/components` directory to customize your application.
-- Add static assets in the `src/assets` directory.
-- Update the routing and layout in `src/App.vue`.
-
-## Linting
-
-To run ESLint and check for code quality, use:
-```bash
-yarn lint
+```sh
+pnpm dev
 ```
 
-## Build
+### Type-Check, Compile and Minify for Production
 
-To build the application for production, run:
-```bash
-yarn build
+```sh
+pnpm build
 ```
 
-This will generate the production-ready files in the `dist` directory.
+### Lint with [ESLint](https://eslint.org/)
+
+```sh
+pnpm lint
+```
