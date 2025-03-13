@@ -12,7 +12,7 @@
 
       <div class="mx-auto mt-10">
         <RouterLink
-          to="/"
+          to="/welcome"
           class="bg-linear-90 from-[#D64059] to-[#5E489D] text-white font-bold px-16 py-3.5 rounded-full w-max"
         >
           Iniciar APP

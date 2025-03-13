@@ -9,6 +9,31 @@ const router = createRouter({
       name: 'home',
       component: PresentationView,
     },
+    {
+      path: '/welcome',
+      name: 'welcome',
+      component: () => import('../views/WelcomeView.vue'),
+    },
+    {
+      path: '/registro',
+      name: 'registro',
+      component: () => import('../views/RegistroView.vue'),
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('../views/LoginView.vue'),
+    },
+    {
+      path: '/login-with-seedphrase',
+      name: 'login-with-seedphrase',
+      component: () => import('../views/LoginWithSeedPhraseView.vue'),
+    },
+    {
+      path: '/dashboard',
+      name: 'dashboard',
+      component: () => import('../views/DashboardView.vue'),
+    },
   ],
 });
 
