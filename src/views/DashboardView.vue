@@ -1,15 +1,20 @@
 <script setup lang="ts">
+import { ref } from 'vue';
+
 import HamburgerMenuIcon from '@/components/icons/HamburgerMenuIcon.vue';
 import CoinData from '@/components/screens/dashboard/CoinData.vue';
+import NavBar from '@/components/screens/dashboard/NavBar.vue';
+
+const openMenu = ref(false);
 </script>
 
 <template>
   <header class="max-w-[375px] mx-auto px-4 pt-6">
-    <button>
+    <button @click="openMenu = !openMenu" class="z-50 fixed cursor-pointer">
       <HamburgerMenuIcon />
     </button>
 
-    <h2 class="font-bold text-3xl mt-6">Balances</h2>
+    <h2 class="font-bold text-3xl mt-16">Balances</h2>
 
     <div
       class="bg-linear-90 from-[#D64059] to-[#5E489D] rounded-[20px] flex flex-col items-center justify-center gap-4 py-2 mt-2.5"
@@ -29,5 +34,10 @@ import CoinData from '@/components/screens/dashboard/CoinData.vue';
     </div>
 
     <CoinData />
+    <CoinData />
+    <CoinData />
+    <CoinData />
   </main>
+
+  <NavBar :open-menu="openMenu" />
 </template>
