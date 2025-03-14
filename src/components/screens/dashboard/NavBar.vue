@@ -17,28 +17,35 @@ function closeMenu() {
 </script>
 
 <template>
+  <div
+    class="bg-[#1D2025]/75 w-screen h-screen z-30 top-0"
+    :class="{
+      'z-30 opacity-100 fixed': openMenu,
+      '-z-50 opacity-0 hidden': !openMenu,
+    }"
+  ></div>
   <aside
     class="bg-[#1D2025] fixed w-full h-dvh top-0 z-40 transition-all duration-500 ease-in-out"
-    :class="{ 'left-0': openMenu, '-left-full': !openMenu }"
+    :class="{ 'left-[25%]': openMenu, '-left-full': !openMenu }"
   >
-    <div class="max-w-[375px] mx-auto px-4">
+    <div class="max-w-[375px] ml-[25%]">
       <div class="flex px-4 pt-6">
         <button @click="closeMenu" class="cursor-pointer">
           <CloseMenuIcon />
         </button>
       </div>
-      <nav class="flex flex-col items-center gap-16 mt-8">
-        <router-link to="/perfil" class="text-4xl font-light">
+      <nav class="flex flex-col items-center gap-12 mt-8">
+        <router-link to="/perfil" class="text-xl font-light">
           Perfil
         </router-link>
-        <router-link to="/" class="text-4xl font-light"> Wallet </router-link>
-        <router-link to="/" class="text-4xl font-light"> P2P </router-link>
-        <router-link to="/" class="text-4xl font-light"> Ofertas </router-link>
+        <router-link to="/" class="text-xl font-light"> Wallet </router-link>
+        <router-link to="/" class="text-xl font-light"> P2P </router-link>
+        <router-link to="/" class="text-xl font-light"> Ofertas </router-link>
       </nav>
 
-      <div class="flex mt-16" @click="router.push('/')">
+      <div class="flex mt-12" @click="router.push('/')">
         <button
-          class="bg-linear-90 from-[#D64059] to-[#5E489D] text-white font-bold px-16 py-3.5 rounded-full w-full text-xl cursor-pointer"
+          class="bg-linear-90 from-[#D64059] to-[#5E489D] text-white font-bold py-2 rounded-full w-full text-lg cursor-pointer"
         >
           Cerrar Sesión
         </button>

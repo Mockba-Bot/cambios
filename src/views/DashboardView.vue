@@ -14,22 +14,22 @@ const openMenu = ref(false);
       <HamburgerMenuIcon />
     </button>
 
-    <h2 class="font-bold text-3xl mt-16">Balances</h2>
+    <h2 class="font-bold text-3xl mt-8">Balances</h2>
 
     <div
-      class="bg-linear-90 from-[#D64059] to-[#5E489D] rounded-[20px] flex flex-col items-center justify-center gap-4 py-2 mt-2.5"
+      class="bg-linear-90 from-[#D64059] to-[#5E489D] rounded-[20px] flex flex-col items-center justify-center gap-2 py-2 mt-2.5"
     >
       <h3 class="text-lg">Disponible</h3>
 
-      <span class="text-4xl">$1,000,000</span>
+      <span class="text-2xl">$1,000,000</span>
     </div>
   </header>
 
   <main class="pt-4">
     <div class="bg-[#2B2F3B]">
       <div class="flex justify-between px-6 py-4 max-w-[375px] mx-auto">
-        <span class="text-2xl">Asset/Chain</span>
-        <span class="text-2xl">Balance</span>
+        <span class="text-xl">Asset/Chain</span>
+        <span class="text-xl">Balance</span>
       </div>
     </div>
 
