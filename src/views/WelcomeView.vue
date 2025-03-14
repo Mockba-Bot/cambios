@@ -3,7 +3,7 @@
 <template>
   <main class="mt-20 max-w-[375px] mx-auto px-4">
     <div class="flex">
-      <h1 class="text-4xl syncopate-bold tracking-wide">Bienvenido</h1>
+      <h1 class="text-4xl tracking-wide">Bienvenido</h1>
     </div>
 
     <div class="mt-10 flex justify-center">

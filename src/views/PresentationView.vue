@@ -7,8 +7,8 @@
     ></div>
 
     <div class="absolute inset-0 grid place-content-center">
-      <h1 class="text-6xl syncopate-bold">CAMBIOS</h1>
-      <h2 class="indent-1.5 text-xl syncopate-regular">DEXCHANGE</h2>
+      <h1 class="text-6xl">CAMBIOS</h1>
+      <h2 class="indent-1.5 text-xl">DEXCHANGE</h2>
 
       <div class="mx-auto mt-10">
         <RouterLink
