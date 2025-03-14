@@ -5,6 +5,11 @@ defineProps<{
   placeholder: string;
   buttonText: string;
 }>();
+
+const emit = defineEmits(['onSubmit']);
+function handleSubmit(): void {
+  emit('onSubmit');
+}
 </script>
 
 <template>
@@ -13,7 +18,7 @@ defineProps<{
   </div>
 
   <form
-    @submit.prevent
+    @submit.prevent="handleSubmit"
     class="w-full pt-10 pb-20 px-4 bg-[#2B2F3B] rounded-2xl"
   >
     <h2 class="font-bold text-xl xl:text-3xl mb-8">{{ title }}</h2>
@@ -21,8 +26,7 @@ defineProps<{
     <input
       :type="type"
       :placeholder="placeholder"
-      class="w-full p-4 bg-[#252832] rounded-lg mb-6"
-      required
+      class="w-full px-4 py-6 bg-[#252832] rounded-lg mb-6"
     />
 
     <button

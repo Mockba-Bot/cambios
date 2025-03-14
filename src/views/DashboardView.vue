@@ -10,7 +10,7 @@ const openMenu = ref(false);
 
 <template>
   <header class="max-w-[375px] mx-auto px-4 pt-6">
-    <button @click="openMenu = !openMenu" class="z-50 fixed cursor-pointer">
+    <button @click="openMenu = true" class="cursor-pointer">
       <HamburgerMenuIcon />
     </button>
 
@@ -19,7 +19,7 @@ const openMenu = ref(false);
     <div
       class="bg-linear-90 from-[#D64059] to-[#5E489D] rounded-[20px] flex flex-col items-center justify-center gap-4 py-2 mt-2.5"
     >
-      <h3 class="text-lg">AVAILABLE ASSETS</h3>
+      <h3 class="text-lg">Disponible</h3>
 
       <span class="text-4xl">$1,000,000</span>
     </div>
@@ -33,11 +33,22 @@ const openMenu = ref(false);
       </div>
     </div>
 
-    <CoinData />
-    <CoinData />
-    <CoinData />
-    <CoinData />
+    <CoinData coin="Arbitrum" :balance="100">
+      <template #icon>
+        <img src="/arbitrum-arb-logo.svg" alt="Arbitrum" class="w-8 h-8" />
+      </template>
+    </CoinData>
+    <CoinData coin="USDT" :balance="100">
+      <template #icon>
+        <img src="/tether-usdt-logo.svg" alt="Arbitrum" class="w-8 h-8" />
+      </template>
+    </CoinData>
+    <CoinData coin="USDC" :balance="100">
+      <template #icon>
+        <img src="/usd-coin-usdc-logo.svg" alt="Arbitrum" class="w-8 h-8" />
+      </template>
+    </CoinData>
   </main>
 
-  <NavBar :open-menu="openMenu" />
+  <NavBar :open-menu="openMenu" @update:closeMenu="openMenu = false" />
 </template>

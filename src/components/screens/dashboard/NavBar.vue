@@ -1,11 +1,19 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
 
+import CloseMenuIcon from '@/components/icons/CloseMenuIcon.vue';
+
 defineProps<{
   openMenu?: boolean;
 }>();
 
+const emit = defineEmits(['update:closeMenu']);
+
 const router = useRouter();
+
+function closeMenu() {
+  emit('update:closeMenu');
+}
 </script>
 
 <template>
@@ -13,8 +21,13 @@ const router = useRouter();
     class="bg-[#1D2025] fixed w-full h-dvh top-0 z-40 transition-all duration-500 ease-in-out"
     :class="{ 'left-0': openMenu, '-left-full': !openMenu }"
   >
-    <div class="max-w-[375px] mx-auto px-4 pt-16">
-      <nav class="flex flex-col items-center gap-16 mt-4">
+    <div class="max-w-[375px] mx-auto px-4">
+      <div class="flex px-4 pt-6">
+        <button @click="closeMenu" class="cursor-pointer">
+          <CloseMenuIcon />
+        </button>
+      </div>
+      <nav class="flex flex-col items-center gap-16 mt-8">
         <router-link to="/perfil" class="text-4xl font-light">
           Perfil
         </router-link>
