@@ -27,12 +27,17 @@ const router = createRouter({
     {
       path: '/login-with-seedphrase',
       name: 'login-with-seedphrase',
-      component: () => import('../views/LoginWithSeedPhraseView.vue'),
+      component: () => import('../views/LoginWithSeedphraseView.vue'),
     },
     {
       path: '/dashboard',
       name: 'dashboard',
       component: () => import('../views/DashboardView.vue'),
+    },
+    {
+      path: '/perfil',
+      name: 'perfil',
+      component: () => import('../views/ProfileView.vue'),
     },
   ],
 });

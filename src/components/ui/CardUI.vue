@@ -27,7 +27,7 @@ defineProps<{
 
     <button
       type="submit"
-      class="bg-linear-90 from-[#D64059] to-[#5E489D] text-white font-bold px-16 py-3.5 rounded-lg w-full flex justify-center"
+      class="bg-linear-90 from-[#D64059] to-[#5E489D] text-white font-bold px-16 py-3.5 rounded-lg w-full flex justify-center cursor-pointer"
     >
       {{ buttonText }}
     </button>
